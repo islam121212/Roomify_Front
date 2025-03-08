@@ -1,61 +1,61 @@
-.background {
+/* إعداد الخلفية الأساسية */
+:host {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100vw;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: black;
-    animation: backgroundChange 7s infinite alternate;
+    z-index: -1; /* خلف جميع العناصر */
+    overflow: hidden;
+    background-color: #380a5f; /* لون الخلفية */
+  }
+  .background {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
   }
   
   .ball {
-    width: 500px;  
-    height: 500px;
-    border-radius: 50%;
     position: absolute;
-    bottom: -200px;
-    background: rgba(255, 0, 0, 0.1); /* لون باهت جدًا */
-    animation: moveBall 7s infinite alternate, colorChange 7s infinite alternate;
-    filter: brightness(0.1); /* تقليل السطوع أكثر لجعلها بالكاد مرئية */
-  }
-
-  
-  /* إنشاء عنصر داخل الكرة للتحكم في الشفافية */
-  .ball::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    width: 1250px; /* حجم الكرة */
+    height: 1250px; /* حجم الكرة */
+    background: radial-gradient(circle, rgba(207, 202, 43, 0.6), rgba(0, 0, 0, 0));
     border-radius: 50%;
-    background: linear-gradient(45deg, red, blue);
-      /* هنا يتم تطبيق الشفافية */
-    animation: colorChange 7s infinite alternate;
+    filter: blur(50px); /* تمويه */
+    animation: moveBall 12s infinite ease-in-out, changeColor 15s infinite linear;
   }
   
+  /* حركة الكرة */
   @keyframes moveBall {
     0% {
-      transform: translate(0, 100%);
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(30vw, 10vh);
     }
     50% {
-      transform: translate(-50vw, -50vh);
+      transform: translate(60vw, 50vh);
+    }
+    75% {
+      transform: translate(30vw, 70vh);
     }
     100% {
-      transform: translate(50vw, 50vh);
+      transform: translate(0, 0);
     }
   }
   
-  @keyframes colorChange {
-    0% { background: rgba(255, 0, 0, 0.1); } /* لون خافت جدًا */
-    33% { background: rgba(255, 255, 0, 0.1); }
-    66% { background: rgba(128, 0, 128, 0.1); }
-    100% { background: rgba(0, 0, 255, 0.1); }
+  @keyframes changeColor {
+    0% {
+      background: radial-gradient(circle, rgba(207, 202, 43, 0.6), rgba(0, 0, 0, 0));
+    }
+    33% {
+      background: radial-gradient(circle, rgba(207, 43, 43, 0.6), rgba(0, 0, 0, 0));
+    }
+    66% {
+      background: radial-gradient(circle, rgba(207, 43, 172, 0.6), rgba(0, 0, 0, 0));
+    }
+    100% {
+      background: radial-gradient(circle, rgba(131, 43, 207, 0.6), rgba(0, 0, 0, 0));
+    }
   }
-  
-  @keyframes backgroundChange {
-    0% { background: black; }
-    50% { background: #222; }
-    100% { background: #444; }
-  }
-  
