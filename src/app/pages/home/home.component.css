@@ -1,0 +1,278 @@
+/* تصميم شريط التنقل */
+.navbar {
+    background: linear-gradient(to right, #0c0013);
+    padding: 25px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    text-decoration: none; /* إزالة التسطير */
+    color: white; /* لون النص */
+    font-size: 20px; /* حجم الخط */
+    font-weight: bold; /* جعله عريض */
+}
+
+.logo a:hover {
+    color: #ffffff; /* تغيير اللون عند تمرير الماوس */
+}
+
+
+/* تصميم الشعار */
+.logo {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* أيقونات التنقل */
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+/* أيقونة البحث والأيقونات الأخرى */
+.nav-icons i {
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.nav-icons i:hover {
+    color: #ffcc00;
+}
+
+/* تصميم صورة البروفايل */
+.profile-img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 2px solid white;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+/* إعدادات عامة */
+body {
+    font-family: Arial, sans-serif;
+    background: #1a001f;
+    color: white;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    
+}
+
+.animated-ball {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(255, 0, 0, 0.6) 10%, rgba(255, 0, 0, 0) 70%);
+    border-radius: 50%;
+    animation: moveBall 50s infinite alternate ease-in-out;
+    
+}
+
+/* حركة الكرة في جميع أنحاء الشاشة */
+@keyframes moveBall {
+    0% {
+        top: 10%;
+        left: 10%;
+    }
+    25% {
+        top: 80%;
+        left: 20%;
+    }
+    50% {
+        top: 50%;
+        left: 90%;
+    }
+    75% {
+        top: 20%;
+        left: 70%;
+    }
+    100% {
+        top: 90%;
+        left: 40%;
+    }
+}
+/* شريط التنقل */
+.navbar {
+    background: linear-gradient(to right, black);
+    padding: 25px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logo a {
+    text-decoration: none; /* إزالة التسطير */
+    color: white; /* لون النص */
+    font-size: 20px; /* حجم الخط */
+    font-weight: bold; /* جعله عريض */
+}
+
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-icons i {
+    font-size: 20px;
+    cursor: pointer;
+}
+/* حاوية البحث */
+.search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* أيقونة البحث */
+.search-icon {
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+/* مربع البحث (مخفي في البداية) */
+.search-box {
+    width: 0;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    transition: width 0.4s ease-in-out, opacity 0.4s;
+    opacity: 0;
+    background: white;
+    color: black;
+    position: absolute;
+    right: 30px;
+}
+
+/* عند النقر على مربع البحث أو الأيقونة، يظهر */
+.search-container:focus-within .search-box {
+    width: 150px;
+    opacity: 1;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+}
+
+
+
+/* صورة البروفايل */
+.profile-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 8px solid #fcfcfc;
+}
+
+/* القائمة المنسدلة */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background: #50003c;
+    border-radius: 5px;
+    padding: 7px;
+    list-style: none;
+    min-width: 100px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown-menu li {
+    color: white;  /* تحديد لون الخط بالأبيض */
+    padding: 1px 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* تغيير لون العناصر عند التمرير */
+.dropdown-menu li:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+/* جعل الأيقونات أيضًا بيضاء */
+.dropdown-menu li i {
+    color: white;
+}
+
+/* ضبط زر تسجيل الخروج */
+.logout {
+    color: red; /* تغيير اللون إلى الأحمر */
+    text-align: center; /* توسيط النص */
+    justify-content: center; /* توسيط العنصر أفقيًا */
+    align-items: center; /* توسيط العنصر عموديًا */
+    width: 100%; /* جعل العنصر يمتد على عرض القائمة بالكامل */
+    cursor: pointer; /* تغيير المؤشر إلى اليد عند التحويم */
+}
+
+/* عرض القائمة عند تمرير الماوس */
+.profile-dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* الشبكة لعرض الصور */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 70px;
+    padding: 30px;
+    justify-content: center;
+}
+
+.image-card {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.image-card img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+.user-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
