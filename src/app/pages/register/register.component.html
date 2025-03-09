@@ -1,0 +1,51 @@
+<div class="  container d-flex justify-content-center align-items-center vh-100 ">
+  <div class=" card p-5 text-white  shadow-lg transparent-bg " style="width: 50rem;" >
+    <h2 class="text-center mb-4">Sign up</h2>
+
+    <!-- Google Sign-in -->
+    <div class="text-center">
+      <img src="assets/google-icon.png" alt="Google" width="40">
+    </div>
+
+
+
+    <form >
+      <div class="row">
+        <!-- Full Name -->
+        <div class="col-md-6">
+          <label class="form-label">Full Name</label>
+          <input type="text" class="form-control bg-secondary text-white" placeholder="Enter full name">
+        </div>
+
+        <!-- Email -->
+        <div class="col-md-6">
+          <label class="form-label">E-mail</label>
+          <input type="email" class="form-control bg-secondary text-white" placeholder="Enter email">
+          <small class="text-danger">Use Valid E-mail</small>
+        </div>
+      </div>
+
+      <div class="row mt-3">
+        <!-- Username -->
+        <div class="col-md-6">
+          <label class="form-label">User Name</label>
+          <input type="text" class="form-control bg-secondary text-white" placeholder="Enter username">
+          <small class="text-danger">This username is not valid</small>
+        </div>
+
+        <!-- Password -->
+        <div class="col-md-6">
+          <label class="form-label">Password</label>
+          <input type="password" class="form-control bg-secondary text-white" placeholder="Enter password">
+          <small class="text-danger">At least 8 characters, 1 uppercase, 1 lowercase, 1 number</small>
+        </div>
+      </div>
+
+      <div class="text-center mt-4">
+        <p>Already have an account? <a routerLink="/login" class="text-danger">Log in</a></p>
+        <button class="btn btn-light px-5">Sign up</button>
+      </div>
+    </form>
+  </div>
+</div>
+لاخ
