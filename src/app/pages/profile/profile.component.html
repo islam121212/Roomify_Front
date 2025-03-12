@@ -1,1 +1,93 @@
-<p>profile works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background: transparent;
+            color: white;
+        }
+        .profile-container {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+        .profile-info {
+            width: 300px;
+            text-align: center;
+        }
+        .profile-info img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+        .rooms-container {
+            display: flex;
+            gap: 15px;
+            overflow-x: auto;
+            white-space: nowrap;
+            padding-bottom: 15px;
+            width: 100%;
+        }
+        .room-card {
+            width: 250px;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+        .room-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            border: 2px solid white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="profile-container">
+            <div class="profile-info">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Profile Picture">
+                <h2>Ali Ellebi</h2>
+                <p>Interior Designer</p>
+                <p>aliellebi123</p>
+                <p>1.3k followers | 45 following</p>
+                <button class="btn btn-primary">Follow</button>
+            </div>
+            <div class="rooms-container">
+                <div class="room-card">
+                    <img src="https://source.unsplash.com/300x200/?livingroom" alt="Room">
+                    <img class="avatar" src="https://randomuser.me/api/portraits/women/45.jpg" alt="Avatar">
+                </div>
+                <div class="room-card">
+                    <img src="https://source.unsplash.com/300x200/?bedroom" alt="Room">
+                    <img class="avatar" src="https://randomuser.me/api/portraits/men/56.jpg" alt="Avatar">
+                </div>
+                <div class="room-card">
+                    <img src="https://source.unsplash.com/300x200/?office" alt="Room">
+                    <img class="avatar" src="https://randomuser.me/api/portraits/women/12.jpg" alt="Avatar">
+                </div>
+                <div class="room-card">
+                    <img src="https://source.unsplash.com/300x200/?kitchen" alt="Room">
+                    <img class="avatar" src="https://randomuser.me/api/portraits/men/23.jpg" alt="Avatar">
+                </div>
+                <div class="room-card">
+                    <img src="https://source.unsplash.com/300x200/?diningroom" alt="Room">
+                    <img class="avatar" src="https://randomuser.me/api/portraits/women/34.jpg" alt="Avatar">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
