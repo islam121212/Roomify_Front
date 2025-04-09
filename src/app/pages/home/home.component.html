@@ -1,76 +1,108 @@
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
-    <div class="container">
-      <!-- شعار الموقع -->
-      <a class="navbar-brand fw-bold" href="#">ROOMIFY</a>
-  
-      <!-- زر التبديل (للشاشات الصغيرة) -->
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarContent"
-        aria-controls="navbarContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-  
-      <!-- عناصر النافبار -->
-      <div class="collapse navbar-collapse" id="navbarContent">
-        <ul class="navbar-nav ms-auto d-flex align-items-center">
-          <!-- 1) البحث عن تصميم -->
-          <li class="nav-item me-3">
-            <a class="nav-link" href="#">
-              <span class="css-icon-search"></span>
-              Search Design
-            </a>
-          </li>
-  
-          <!-- 2) عرض التصاميم -->
-          <li class="nav-item me-3">
-            <a class="nav-link" href="#">
-              <span class="css-icon-designs">
-                <span></span><span></span><span></span><span></span>
-              </span>
-              Designs
-            </a>
-          </li>
-  
-         <!-- 3) إنشاء غرفة -->
-<li class="nav-item me-3">
-  <a class="nav-link" routerLink="/generate">
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROOMIFY</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body>
 
-    <span class="css-icon-create-room"></span>
-    Create Room
-  </a>
-</li>
+    <div class="animated-ball"></div>
 
-          <!-- 4) الملف الشخصي مع القائمة المنسدلة -->
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle d-flex align-items-center"
-              href="#"
-              id="profileDropdown"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              <span class="css-icon-profile"></span>
-              Profile
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
-              <li><a class="dropdown-item" href="#">Profile</a></li>
-              <li><a class="dropdown-item" href="#">Settings</a></li>
-              <li><hr class="dropdown-divider" /></li>
-              <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
+<!-- شريط التنقل -->
+<nav class="navbar">
+    <div class="logo">
+        <a href="index.html">ROOMIFY</a>
     </div>
-  </nav>
-  
 
+    <div class="nav-icons">
+         <!-- حاوية البحث -->
+         <div class="search-container">
+            <label for="searchBox" class="search-icon">
+                <i class="bi bi-search"></i>
+            </label>
+            <input type="text" id="searchBox" class="search-box" placeholder="Search ... ">
+        </div>
+
+        <i class="bi bi-layers"></i>
+        <a routerLink="/generate"><i class="bi bi-brush"></i></a>
+
+
+        <!-- صورة البروفايل -->
+        <div class="profile-dropdown">
+            <button class="profile-btn">
+                <img src="/assets/jojo.jpg" alt="Profile" class="profile-img">
+            </button>
+
+            <!-- القائمة المنسدلة -->
+            <ul class="dropdown-menu">
+                <li><i class="bi bi-person-plus-fill"></i> Sign up</li>
+                <a routerLink="/profile"><li><i class="bi bi-person"></i> Profile</li></a>
+                <li><i class="bi bi-envelope"></i> Messages</li>
+                <li><i class="bi bi-gear"></i> Settings</li>
+                <li><i class="bi bi-bell"></i> Notifications</li>
+                <li class="logout">Log out</li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- شبكة الصور -->
+<div class="gallery">
+    <div class="image-card">
+      <a [routerLink]="['/comment']"><img src="/assets/room1.jpg" alt="Room"></a>
+
+        <img src="/assets/jojo.jpg" alt="User" class="user-icon">
+    </div>
+    <div class="image-card">
+        <a href="comment.html"><img src="/assets/room1.jpg" alt="Room"></a>
+        <img src="/assets/jojo.jpg" alt="User" class="user-icon">
+    </div>
+    <div class="image-card">
+        <a href="comment.html"><img src="/assets/room1.jpg" alt="Room"></a>
+        <img src="/assets/jojo.jpg" alt="User" class="user-icon">
+    </div>
+    <div class="image-card">
+        <a href="comment.html"><img src="/assets/room1.jpg" alt="Room"></a>
+        <img src="/assets/jojo.jpg" alt="User" class="user-icon">
+    </div>
+    <div class="image-card">
+        <a href="comment.html"><img src="/assets/room1.jpg" alt="Room"></a>
+        <img src="/assets/jojo.jpg" alt="User" class="user-icon">
+    </div>
+    <div class="image-card">
+        <a href="comment.html"><img src="/assets/room1.jpg" alt="Room"></a>
+        <img src="/assets/jojo.jpg" alt="User" class="user-icon">
+    </div>
+    <div class="image-card">
+        <a href="comment.html"><img src="/assets/room1.jpg" alt="Room"></a>
+        <img src="/assets/jojo.jpg" alt="User" class="user-icon">
+    </div>
+    <div class="image-card">
+        <a href="comment.html"><img src="/assets/room1.jpg" alt="Room"></a>
+        <img src="/assets/jojo.jpg" alt="User" class="user-icon">
+    </div>
+    <div class="image-card">
+        <a href="comment.html"><img src="/assets/room1.jpg" alt="Room"></a>
+        <img src="/assets/jojo.jpg" alt="User" class="user-icon">
+    </div>
+    <div class="image-card">
+        <a href="comment.html"><img src="/assets/room1.jpg" alt="Room"></a>
+        <img src="/assets/jojo.jpg" alt="User" class="user-icon">
+    </div>
+    <div class="image-card">
+        <a href="comment.html"><img src="/assets/room1.jpg" alt="Room"></a>
+        <img src="/assets/jojo.jpg" alt="User" class="user-icon">
+    </div>
+    <div class="image-card">
+        <a href="comment.html"><img src="/assets/room1.jpg" alt="Room"></a>
+        <img src="/assets/jojo.jpg" alt="User" class="user-icon">
+    </div>
+</div>
+
+</body>
+</html>
 
 

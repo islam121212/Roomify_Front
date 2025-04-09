@@ -1,3 +1,4 @@
+import { CommentComponent } from './comment/comment.component';
 import { Routes } from '@angular/router';
 import { RegisterComponent } from './pages/register/register.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -11,5 +12,6 @@ export const routes: Routes = [
     { path: 'home', component: HomeComponent},
     { path: 'generate', component: GenerateComponent},
     { path: 'profile', component: ProfileComponent},
+    { path: 'comment', component: CommentComponent},
     { path: '', redirectTo: '/register', pathMatch: 'full' }
 ];

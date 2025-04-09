@@ -1,22 +1,57 @@
-<app-navbar></app-navbar>
-<div class="d-flex justify-content-center align-items-center vh-100 ">
-    <div class="card p-4 shadow-lg bg-opacity-50" style="width: 400px; border-radius: 10px;">
-      <h3 class="text-center mb-4 text-white">Login</h3>
-      <form>
-        <div class="mb-3">
-          <label for="email" class="form-label text-white">Email address</label>
-          <input type="email" class="form-control bg-transparent text-white border-light" id="email" placeholder="Enter your email">
-        </div>
-        <div class="mb-3">
-          <label for="password" class="form-label text-white">Password</label>
-          <input type="password" class="form-control bg-transparent text-white border-light" id="password" placeholder="Enter your password">
-        </div>
-        <p>Already have an account? <a routerLink="/register" class="text-danger">Register</a></p>
-        <button type="submit" class="btn btn-primary w-100">Login</button>
-        <div class="text-center mt-3">
-          <a href="#" class="text-decoration-none text-white">Forgot password?</a>
-        </div>
-      </form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2 class="title">Login</h2>
+
+    <!-- Google login -->
+    <div class="google-login">
+      <a href="https://accounts.google.com" target="_blank" class="google-link">
+        <div class="google-icon">G</div>
+      </a>
     </div>
+
+    <!-- Divider -->
+    <div class="divider">
+      <hr />
+      <span>OR</span>
+      <hr />
+    </div>
+
+    <!-- Form -->
+    <form>
+      <div class="form-row">
+        <!-- Email field -->
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" value="" placeholder="email" required />
+          <small class="error"></small>
+        </div>
+
+        <!-- Password field -->
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" value="" placeholder="password" required />
+          <small class="error">
+
+          </small>
+        </div>
+      </div>
+
+      <!-- Sign up link -->
+      <p class="signup-link">
+        Don’t have an account? <a href="#">Sign up</a>
+      </p>
+
+      <!-- Login button -->
+      <button type="submit" class="submit-btn">Login</button>
+    </form>
   </div>
-  
+</body>
+</html>

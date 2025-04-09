@@ -8,7 +8,7 @@ import { NavbarComponent } from '../../navbar/navbar.component';
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css'],
-  imports: [CommonModule, ReactiveFormsModule , RouterModule , NavbarComponent], 
+  imports: [CommonModule, ReactiveFormsModule , RouterModule],
   standalone:true,
 })
 export class RegisterComponent {

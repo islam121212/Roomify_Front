@@ -5,7 +5,7 @@ import { NavbarComponent } from '../../navbar/navbar.component';
 
 @Component({
   selector: 'app-login',
-  imports: [RouterModule , NavbarComponent],
+  imports: [RouterModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })

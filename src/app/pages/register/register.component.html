@@ -1,53 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign up</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Sign up</h1>
 
-<app-navbar></app-navbar>
-<div class="  container d-flex justify-content-center align-items-center vh-100 ">
-  <div class=" card p-5 text-white  shadow-lg transparent-bg " style="width: 50rem;" >
-    <h2 class="text-center mb-4">Sign up</h2>
-
-    <!-- Google Sign-in -->
-    <div class="text-center">
-      <img src="assets/google-icon.png" alt="Google" width="40">
+    <div class="google-login">
+        <a href="https://accounts.google.com" target="_blank" class="google-link"><div class="google-icon">G</div>
+        </a>
+      <div class="divider">
+        <span></span>
+        <p>OR</p>
+        <span></span>
+      </div>
     </div>
 
+    <form>
+      <div class="form-grid">
+        <div class="left">
+          <label>Full Name</label>
+          <input type="text" value=""placeholder ="full name" required />
 
-
-    <form >
-      <div class="row">
-        <!-- Full Name -->
-        <div class="col-md-6">
-          <label class="form-label">Full Name</label>
-          <input type="text" class="form-control bg-secondary text-white" placeholder="Enter full name">
+          <label>User Name</label>
+          <input type="text" value="" placeholder ="name" required />
+          <p class="error"></p>
         </div>
 
-        <!-- Email -->
-        <div class="col-md-6">
-          <label class="form-label">E-mail</label>
-          <input type="email" class="form-control bg-secondary text-white" placeholder="Enter email">
-          <small class="text-danger">Use Valid E-mail</small>
-        </div>
-      </div>
+        <div class="right">
+          <label>E-mail</label>
+          <input type="email" value="" placeholder ="email" required />
+          <p class="error"></p>
 
-      <div class="row mt-3">
-        <!-- Username -->
-        <div class="col-md-6">
-          <label class="form-label">User Name</label>
-          <input type="text" class="form-control bg-secondary text-white" placeholder="Enter username">
-          <small class="text-danger">This username is not valid</small>
-        </div>
-
-        <!-- Password -->
-        <div class="col-md-6">
-          <label class="form-label">Password</label>
-          <input type="password" class="form-control bg-secondary text-white" placeholder="Enter password">
-          <small class="text-danger">At least 8 characters, 1 uppercase, 1 lowercase, 1 number</small>
+          <label>Password</label>
+          <input type="password" value=""placeholder ="Password" required />
+          <p class="error"></p>
         </div>
       </div>
+      <br>
+      <p class="login">Already have an account? <a href="login.html">Log in</a></p>
 
-      <div class="text-center mt-4">
-        <p>Already have an account? <a routerLink="/login" class="text-danger">Log in</a></p>
-        <button class="btn btn-light px-5">Sign up</button>
-      </div>
+
+      <button type="submit">Sign up</button>
     </form>
   </div>
-</div>
-لاخ
+</body>
+</html>

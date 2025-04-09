@@ -45,16 +45,16 @@
     <div class="container">
         <h4 class="text-center">Create a Room</h4>
         <p>EX: Create a room with warm mood, modern furniture, classic brown carpet and wall clock</p>
-        
+
         <div class="mb-3">
             <textarea class="form-control" rows="3" placeholder="Describe your room..."></textarea>
         </div>
 
         <div class="mb-3 d-flex flex-column align-items-center">
-            <button class="btn btn-outline-light w-100 mb-2">➕ Add room images</button>
-            <button class="btn btn-outline-light w-100">➕ Add furniture images</button>
-        </div>
+          <button class="btn btn-outline-light w-100 mb-2" onclick="document.getElementById('roomImages').click()">➕ Add room images</button>
+          <input type="file" id="roomImages" accept="image/*" multiple style="display: none;">
 
+      </div>
         <div class="mb-3">
             <div class="input-group">
                 <span class="input-group-text">🏠</span>
@@ -68,7 +68,7 @@
                 <input type="text" class="form-control" placeholder="Design Style">
             </div>
         </div>
-        
+
         <button class="btn-generate">GENERATE</button>
     </div>
 </body>

@@ -1,6 +1,130 @@
-.card {
-    background: rgba(255, 255, 255, 0.1); /* خلفية شفافة */
-    backdrop-filter: blur(10px); /* تأثير البلور */
-    border: 1px solid rgba(255, 255, 255, 0.2); /* حدود خفيفة */
-  }
-  
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Background */
+body {
+  background-color: #120013;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container */
+.container {
+  width: 500px;
+  padding: 40px;
+  background-color: transparent;
+  text-align: center;
+}
+
+/* Title */
+.title {
+  font-size: 35px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Google Login */
+.google-login {
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+
+.google-link {
+  text-decoration: none;
+}
+
+/* Divider */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.divider hr {
+  flex: 1;
+  border: 0.5px solid #aaa;
+}
+
+.divider span {
+  font-weight: bold;
+}
+
+/* Form Row */
+.form-row {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+/* Form Group */
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  opacity: 0.8;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 30px;
+  border: none;
+  margin-bottom: 5px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  outline: none;
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+.error {
+  color: red;
+  font-size: 11px;
+}
+
+/* Signup link */
+.signup-link {
+  margin-top: 25px;
+  font-size: 14px;
+}
+
+.signup-link a {
+  color: red;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Button */
+.submit-btn {
+  margin-top: 15px;
+  background-color: #444;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 25px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #666;
+}
