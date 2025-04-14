@@ -38,12 +38,11 @@
 
             <!-- القائمة المنسدلة -->
             <ul class="dropdown-menu">
-                <li><i class="bi bi-person-plus-fill"></i> Sign up</li>
+               <a [routerLink]="['/register']"><li><i class="bi bi-person-plus-fill"></i> Sign up</li></a>
                 <a routerLink="/profile"><li><i class="bi bi-person"></i> Profile</li></a>
-                <li><i class="bi bi-envelope"></i> Messages</li>
-                <li><i class="bi bi-gear"></i> Settings</li>
-                <li><i class="bi bi-bell"></i> Notifications</li>
-                <li class="logout">Log out</li>
+                <a [routerLink]="['/register']"><li><i class="bi bi-gear"></i> Settings</li></a>
+                <a  [routerLink]="['/register']"> <li><i class="bi bi-bell"></i> Notifications</li></a>
+                <a  [routerLink]="['/login']"><li class="logout">Log out</li></a>
             </ul>
         </div>
     </div>
@@ -57,49 +56,31 @@
         <img src="/assets/jojo.jpg" alt="User" class="user-icon">
     </div>
     <div class="image-card">
-        <a href="comment.html"><img src="/assets/room1.jpg" alt="Room"></a>
+      <a [routerLink]="['/comment']"><img src="/assets/room1.jpg" alt="Room"></a>
+
         <img src="/assets/jojo.jpg" alt="User" class="user-icon">
     </div>
     <div class="image-card">
-        <a href="comment.html"><img src="/assets/room1.jpg" alt="Room"></a>
+      <a [routerLink]="['/comment']"><img src="/assets/room1.jpg" alt="Room"></a>
+
         <img src="/assets/jojo.jpg" alt="User" class="user-icon">
     </div>
     <div class="image-card">
-        <a href="comment.html"><img src="/assets/room1.jpg" alt="Room"></a>
+      <a [routerLink]="['/comment']"><img src="/assets/room1.jpg" alt="Room"></a>
+
         <img src="/assets/jojo.jpg" alt="User" class="user-icon">
     </div>
     <div class="image-card">
-        <a href="comment.html"><img src="/assets/room1.jpg" alt="Room"></a>
+      <a [routerLink]="['/comment']"><img src="/assets/room1.jpg" alt="Room"></a>
+
         <img src="/assets/jojo.jpg" alt="User" class="user-icon">
     </div>
     <div class="image-card">
-        <a href="comment.html"><img src="/assets/room1.jpg" alt="Room"></a>
+      <a [routerLink]="['/comment']"><img src="/assets/room1.jpg" alt="Room"></a>
+
         <img src="/assets/jojo.jpg" alt="User" class="user-icon">
     </div>
-    <div class="image-card">
-        <a href="comment.html"><img src="/assets/room1.jpg" alt="Room"></a>
-        <img src="/assets/jojo.jpg" alt="User" class="user-icon">
-    </div>
-    <div class="image-card">
-        <a href="comment.html"><img src="/assets/room1.jpg" alt="Room"></a>
-        <img src="/assets/jojo.jpg" alt="User" class="user-icon">
-    </div>
-    <div class="image-card">
-        <a href="comment.html"><img src="/assets/room1.jpg" alt="Room"></a>
-        <img src="/assets/jojo.jpg" alt="User" class="user-icon">
-    </div>
-    <div class="image-card">
-        <a href="comment.html"><img src="/assets/room1.jpg" alt="Room"></a>
-        <img src="/assets/jojo.jpg" alt="User" class="user-icon">
-    </div>
-    <div class="image-card">
-        <a href="comment.html"><img src="/assets/room1.jpg" alt="Room"></a>
-        <img src="/assets/jojo.jpg" alt="User" class="user-icon">
-    </div>
-    <div class="image-card">
-        <a href="comment.html"><img src="/assets/room1.jpg" alt="Room"></a>
-        <img src="/assets/jojo.jpg" alt="User" class="user-icon">
-    </div>
+
 </div>
 
 </body>

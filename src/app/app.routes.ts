@@ -1,3 +1,5 @@
+import { ChangePasswordComponent } from './change-password/change-password.component';
+import { SettingsComponent } from './settings/settings.component';
 import { CommentComponent } from './comment/comment.component';
 import { Routes } from '@angular/router';
 import { RegisterComponent } from './pages/register/register.component';
@@ -13,5 +15,8 @@ export const routes: Routes = [
     { path: 'generate', component: GenerateComponent},
     { path: 'profile', component: ProfileComponent},
     { path: 'comment', component: CommentComponent},
+    { path: 'settings', component: SettingsComponent},
+    { path: 'changepass', component: ChangePasswordComponent},
+
     { path: '', redirectTo: '/register', pathMatch: 'full' }
 ];
