@@ -1,3 +1,5 @@
+import { FollowersComponent } from './followers/followers.component';
+import { FollowingComponent } from './following/following.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { SettingsComponent } from './settings/settings.component';
 import { CommentComponent } from './comment/comment.component';
@@ -17,6 +19,8 @@ export const routes: Routes = [
     { path: 'comment', component: CommentComponent},
     { path: 'settings', component: SettingsComponent},
     { path: 'changepass', component: ChangePasswordComponent},
+    { path: 'following', component: FollowingComponent},
+    { path: 'followers', component: FollowersComponent},
 
     { path: '', redirectTo: '/register', pathMatch: 'full' }
 ];
