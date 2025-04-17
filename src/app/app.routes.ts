@@ -1,3 +1,5 @@
+import { OtpCodeComponent } from './otp-code/otp-code.component';
+import { ConfirmEmailComponent } from './confirm-email/confirm-email.component';
 import { Routes } from '@angular/router';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
@@ -21,5 +23,7 @@ export const routes: Routes = [
   { path: 'changepass', component: ChangePasswordComponent },
   { path: 'following', component: FollowingComponent },
   { path: 'followers', component: FollowersComponent },
+  { path: 'confirm', component: ConfirmEmailComponent },
+  { path: 'otp', component: OtpCodeComponent },
   { path: '', redirectTo: '/register', pathMatch: 'full' },
 ];

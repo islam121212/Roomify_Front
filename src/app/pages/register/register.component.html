@@ -10,7 +10,8 @@
     <h1>Sign up</h1>
 
     <div class="google-login">
-        <a href="https://accounts.google.com" target="_blank" class="google-link"><div class="google-icon">G</div>
+        <a href="https://accounts.google.com" target="_blank" class="google-link">
+            <div class="google-icon">G</div>
         </a>
       <div class="divider">
         <span></span>
@@ -19,32 +20,31 @@
       </div>
     </div>
 
-    <form>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
       <div class="form-grid">
         <div class="left">
           <label>Full Name</label>
-          <input type="text" value=""placeholder ="full name" required />
+          <input formControlName="fullName" type="text" placeholder="Full Name" required />
 
           <label>User Name</label>
-          <input type="text" value="" placeholder ="name" required />
-          <p class="error"></p>
+          <input formControlName="username" type="text" placeholder="Username" required />
+          <p class="error" *ngIf="f['username']?.invalid && submitted">Username is required and must be alphanumeric</p>
         </div>
 
         <div class="right">
           <label>E-mail</label>
-          <input type="email" value="" placeholder ="email" required />
-          <p class="error"></p>
+          <input formControlName="email" type="email" placeholder="Email" required />
+          <p class="error" *ngIf="f['email']?.invalid && submitted">Invalid email address</p>
 
           <label>Password</label>
-          <input type="password" value=""placeholder ="Password" required />
-          <p class="error"></p>
+          <input formControlName="password" type="password" placeholder="Password" required />
+          <p class="error" *ngIf="f['password']?.invalid && submitted">Password must be at least 8 characters long and contain an uppercase letter, a lowercase letter, and a number</p>
         </div>
       </div>
       <br>
       <p class="login">Already have an account? <a href="login.html">Log in</a></p>
 
-
-      <button type="submit">Sign up</button>
+      <button type="submit" [disabled]="registerForm.invalid">Sign up</button>
     </form>
   </div>
 </body>

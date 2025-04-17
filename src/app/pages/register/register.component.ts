@@ -1,21 +1,22 @@
+import { RegistrationService } from './../../registration.service';
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators , ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
-import { NavbarComponent } from '../../navbar/navbar.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css'],
-  imports: [CommonModule, ReactiveFormsModule , RouterModule],
-  standalone:true,
+  imports: [CommonModule, ReactiveFormsModule],
+  standalone: true,
 })
 export class RegisterComponent {
   registerForm: FormGroup;
   submitted = false;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private authService: RegistrationService) {
     this.registerForm = this.fb.group({
       fullName: ['', [Validators.required, Validators.minLength(3)]],
       username: ['', [Validators.required, Validators.pattern('^[a-zA-Z0-9_]+$')]],
@@ -31,8 +32,17 @@ export class RegisterComponent {
   onSubmit() {
     this.submitted = true;
     if (this.registerForm.valid) {
-      console.log('Registration Successful', this.registerForm.value);
-      // يمكنك إرسال البيانات إلى الـ API هنا
+      const { fullName, username, email, password } = this.registerForm.value;
+
+      this.authService.register(fullName, username, email, password).subscribe(
+        response => {
+          console.log('Registration successful', response);
+          // يمكنك إعادة التوجيه إلى صفحة تسجيل الدخول أو صفحة أخرى
+        },
+        error => {
+          console.error('Registration failed', error);
+        }
+      );
     }
   }
 }
