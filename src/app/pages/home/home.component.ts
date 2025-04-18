@@ -1,14 +1,24 @@
-import { CommentComponent } from './../../comment/comment.component';
-import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
-
+import { CommonModule } from '@angular/common';
+import { RouterOutlet, RouterModule } from '@angular/router';
+import { PostsService } from './../../services/posts.service';
+import { Component, OnInit } from '@angular/core';
+import type { Post } from '../../services/posts.service';
 
 @Component({
   selector: 'app-home',
-  imports: [RouterModule],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrls: ['./home.component.css'],
+  standalone: true,
+  imports: [RouterModule , CommonModule], // ✅ ضيفهم هنا
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
+  posts: Post[] = [];
 
+  constructor(private postsService: PostsService) {}
+
+  ngOnInit(): void {
+    this.postsService.getAllPosts().subscribe((res) => {
+      this.posts = res;
+    });
+  }
 }

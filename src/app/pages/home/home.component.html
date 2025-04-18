@@ -50,37 +50,13 @@
 
 <!-- شبكة الصور -->
 <div class="gallery">
-    <div class="image-card">
-      <a [routerLink]="['/comment']"><img src="/assets/room1.jpg" alt="Room"></a>
-
-        <img src="/assets/jojo.jpg" alt="User" class="user-icon">
-    </div>
-    <div class="image-card">
-      <a [routerLink]="['/comment']"><img src="/assets/room1.jpg" alt="Room"></a>
-
-        <img src="/assets/jojo.jpg" alt="User" class="user-icon">
-    </div>
-    <div class="image-card">
-      <a [routerLink]="['/comment']"><img src="/assets/room1.jpg" alt="Room"></a>
-
-        <img src="/assets/jojo.jpg" alt="User" class="user-icon">
-    </div>
-    <div class="image-card">
-      <a [routerLink]="['/comment']"><img src="/assets/room1.jpg" alt="Room"></a>
-
-        <img src="/assets/jojo.jpg" alt="User" class="user-icon">
-    </div>
-    <div class="image-card">
-      <a [routerLink]="['/comment']"><img src="/assets/room1.jpg" alt="Room"></a>
-
-        <img src="/assets/jojo.jpg" alt="User" class="user-icon">
-    </div>
-    <div class="image-card">
-      <a [routerLink]="['/comment']"><img src="/assets/room1.jpg" alt="Room"></a>
-
-        <img src="/assets/jojo.jpg" alt="User" class="user-icon">
-    </div>
-
+  <div class="image-card" *ngFor="let post of posts">
+    <a [routerLink]="['/comment']">
+      <img [src]="post.imagePath" alt="Room">
+    </a>
+    <span class="description-text">{{ post.description }}</span>
+    <img src="/assets/jojo.jpg" alt="User" class="user-icon">
+  </div>
 </div>
 
 </body>
