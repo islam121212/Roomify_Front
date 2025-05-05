@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router'; // ✅ استيراد Router
 
 @Component({
   selector: 'app-change-password',
@@ -15,6 +16,8 @@ export class ChangePasswordComponent {
   oldPassword = '';
   newPassword = '';
 
+  constructor(private router: Router) {} // ✅ حقن الـ Router
+
   openModal() {
     this.showModal = true;
   }
@@ -26,6 +29,8 @@ export class ChangePasswordComponent {
   confirmChange() {
     console.log('Old:', this.oldPassword);
     console.log('New:', this.newPassword);
-    this.closeModal();
+
+    // ✅ التوجيه إلى صفحة settings
+    this.router.navigate(['/settings']);
   }
 }

@@ -15,4 +15,9 @@ export class SettingsComponent {
   goToSettings() {
     this.router.navigate(['/changepass']);
   }
+
+  goHome() {
+    this.router.navigate(['/home']);
+  }
+
 }

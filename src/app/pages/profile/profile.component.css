@@ -1,0 +1,159 @@
+html, body {
+  background-color: #1a001a;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  background-attachment: fixed;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 300px;
+  padding: 110px 30px;
+  background-color: #1a001a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 19px;
+}
+
+h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.title {
+  font-size: 19px;
+  color: #ccc;
+}
+
+.username {
+  font-size: 18px;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+.followers p {
+  font-size: 23px;
+  margin: 4px 0;
+  white-space: nowrap;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  font-size: 30px;
+  margin-left: 400px;
+  margin-top: -200px;
+}
+
+.settings {
+  margin-top: 120px;
+  font-size: 20px;
+  color: white;
+  margin-left: -130px;
+}
+
+/* Main content */
+.main-content {
+  flex: 1;
+  padding: 0;
+  overflow: hidden;
+}
+
+.top-bar {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.top-bar i {
+  font-size: 25px;
+  color: white;
+}
+
+.top-avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+}
+
+.gallery {
+  display: flex;
+  gap: 25px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 120px 30px 30px 30px;
+  scroll-behavior: smooth;
+}
+
+.image-card {
+  flex-shrink: 0;
+}
+
+.image-card img {
+  width: 290px;
+  height: 130px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.animated-ball {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(255, 0, 0, 0.6) 10%, rgba(255, 0, 0, 0) 70%);
+  border-radius: 50%;
+  animation: moveBall 50s infinite alternate ease-in-out;
+}
+
+@keyframes moveBall {
+  0% { top: 10%; left: 10%; }
+  25% { top: 80%; left: 20%; }
+  50% { top: 50%; left: 90%; }
+  75% { top: 20%; left: 70%; }
+  100% { top: 90%; left: 40%; }
+}
+
+.gallery::-webkit-scrollbar {
+  height: 8px;
+}
+
+.gallery::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+.gallery::-webkit-scrollbar-track {
+  background-color: #1a001a;
+}
