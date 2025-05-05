@@ -33,6 +33,10 @@
         Don’t have an account? <a routerLink="/register">Sign up</a>
       </p>
 
+      <p class="signup-link">
+        forget password <a routerLink="/forget">forget password</a>
+      </p>
+
       <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
 
       <button type="submit" class="submit-btn">Login</button>

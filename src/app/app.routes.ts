@@ -1,3 +1,4 @@
+import { ForgetComponent } from './forget/forget.component';
 import { OtpCodeComponent } from './otp-code/otp-code.component';
 import { ConfirmEmailComponent } from './confirm-email/confirm-email.component';
 import { Routes } from '@angular/router';
@@ -25,5 +26,6 @@ export const routes: Routes = [
   { path: 'followers', component: FollowersComponent },
   { path: 'confirm', component: ConfirmEmailComponent },
   { path: 'otp', component: OtpCodeComponent },
+  { path: 'forget', component: ForgetComponent },
   { path: '', redirectTo: '/register', pathMatch: 'full' },
 ];

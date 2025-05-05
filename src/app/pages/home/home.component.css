@@ -8,32 +8,27 @@
 }
 
 .logo a {
-  text-decoration: none; /* إزالة التسطير */
-  color: white; /* لون النص */
-  font-size: 20px; /* حجم الخط */
-  font-weight: bold; /* جعله عريض */
-}
-
-.logo a:hover {
-  color: #ffffff; /* تغيير اللون عند تمرير الماوس */
-}
-
-
-/* تصميم الشعار */
-.logo {
+  text-decoration: none;
   color: white;
   font-size: 20px;
   font-weight: bold;
 }
 
-/* أيقونات التنقل */
+.logo a:hover {
+  color: #ffffff;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
 .nav-icons {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 25px;
 }
 
-/* أيقونة البحث والأيقونات الأخرى */
 .nav-icons i {
   font-size: 20px;
   color: white;
@@ -45,7 +40,6 @@
   color: #ffcc00;
 }
 
-/* تصميم صورة البروفايل */
 .profile-img {
   width: 35px;
   height: 35px;
@@ -55,7 +49,6 @@
   cursor: pointer;
 }
 
-/* إعدادات عامة */
 html, body {
   margin: 0;
   padding: 0;
@@ -78,57 +71,16 @@ body {
   background: radial-gradient(circle, rgba(255, 0, 0, 0.6) 10%, rgba(255, 0, 0, 0) 70%);
   border-radius: 50%;
   animation: moveBall 50s infinite alternate ease-in-out;
-
 }
 
-/* حركة الكرة في جميع أنحاء الشاشة */
 @keyframes moveBall {
-  0% {
-      top: 10%;
-      left: 10%;
-  }
-  25% {
-      top: 80%;
-      left: 20%;
-  }
-  50% {
-      top: 50%;
-      left: 90%;
-  }
-  75% {
-      top: 20%;
-      left: 70%;
-  }
-  100% {
-      top: 90%;
-      left: 40%;
-  }
-}
-/* شريط التنقل */
-
-.logo {
-  font-size: 20px;
-  font-weight: bold;
+  0% { top: 10%; left: 10%; }
+  25% { top: 80%; left: 20%; }
+  50% { top: 50%; left: 90%; }
+  75% { top: 20%; left: 70%; }
+  100% { top: 90%; left: 40%; }
 }
 
-.logo a {
-  text-decoration: none; /* إزالة التسطير */
-  color: white; /* لون النص */
-  font-size: 20px; /* حجم الخط */
-  font-weight: bold; /* جعله عريض */
-}
-
-
-.nav-icons {
-  display: flex;
-  align-items: center;
-  gap: 25px;
-}
-
-.nav-icons i {
-  font-size: 20px;
-  cursor: pointer;
-}
 /* حاوية البحث */
 .search-container {
   display: flex;
@@ -136,14 +88,12 @@ body {
   position: relative;
 }
 
-/* أيقونة البحث */
 .search-icon {
   font-size: 20px;
   color: white;
   cursor: pointer;
 }
 
-/* مربع البحث (مخفي في البداية) */
 .search-box {
   width: 0;
   padding: 5px;
@@ -158,7 +108,6 @@ body {
   right: 30px;
 }
 
-/* عند النقر على مربع البحث أو الأيقونة، يظهر */
 .search-container:focus-within .search-box {
   width: 150px;
   opacity: 1;
@@ -166,9 +115,6 @@ body {
   padding-left: 10px;
 }
 
-
-
-/* صورة البروفايل */
 .profile-dropdown {
   position: relative;
   display: inline-block;
@@ -187,7 +133,6 @@ body {
   border: 2px solid #fcfcfc;
 }
 
-/* القائمة المنسدلة */
 .dropdown-menu {
   display: none;
   position: absolute;
@@ -202,7 +147,7 @@ body {
 }
 
 .dropdown-menu li {
-  color: white;  /* تحديد لون الخط بالأبيض */
+  color: white;
   padding: 1px 10px;
   cursor: pointer;
   display: flex;
@@ -210,33 +155,29 @@ body {
   gap: 10px;
 }
 
-/* تغيير لون العناصر عند التمرير */
 .dropdown-menu li:hover {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 4px;
 }
 
-/* جعل الأيقونات أيضًا بيضاء */
 .dropdown-menu li i {
   color: white;
 }
 
-/* ضبط زر تسجيل الخروج */
 .logout {
-  color: red; /* تغيير اللون إلى الأحمر */
-  text-align: center; /* توسيط النص */
-  justify-content: center; /* توسيط العنصر أفقيًا */
-  align-items: center; /* توسيط العنصر عموديًا */
-  width: 100%; /* جعل العنصر يمتد على عرض القائمة بالكامل */
-  cursor: pointer; /* تغيير المؤشر إلى اليد عند التحويم */
+  color: red;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
 }
 
-/* عرض القائمة عند تمرير الماوس */
 .profile-dropdown:hover .dropdown-menu {
   display: block;
 }
 
-/* الشبكة لعرض الصور */
+/* شبكة الصور */
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -256,17 +197,19 @@ body {
 
 .image-card img {
   width: 100%;
+  aspect-ratio: 1 / 1; /* اجعل الصورة مربعة */
+  object-fit: cover;
   display: block;
   border-radius: 10px;
 }
 
 .user-icon {
   position: absolute;
-  top: 10px; /* مسافة من الأعلى */
+  top: 10px;
   right: 250px;
   height: 40px;
- border-radius: 20px; /* حواف دائرية فقط من اليسار */
-  object-fit: cover; /* منع التشوه */
-  border: 3px solid white; /* إضافة إطار أبيض */
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* ظل خفيف للصورة */
+  border-radius: 20px;
+  object-fit: cover;
+  border: 3px solid white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
