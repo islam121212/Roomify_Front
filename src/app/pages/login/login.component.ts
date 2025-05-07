@@ -1,6 +1,6 @@
 import { HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common'; // ✅ أضف هذا
 import { FormsModule } from '@angular/forms';   // ✅ وأضف هذا لـ ngModel
 import { AuthService } from '../../services/auth.service';
@@ -8,7 +8,7 @@ import { AuthService } from '../../services/auth.service';
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [CommonModule, FormsModule , HttpClientModule], // ✅ ضيفهم هنا
+  imports: [CommonModule, FormsModule , HttpClientModule , RouterModule], // ✅ ضيفهم هنا
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })

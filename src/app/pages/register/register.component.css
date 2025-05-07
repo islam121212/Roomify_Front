@@ -2,11 +2,15 @@ body {
   background-color: #0d0215;
   color: white;
   font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+.all {
+  background: #1a001f;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin: 0;
 }
 
 .container {
@@ -31,7 +35,6 @@ h1 {
   margin-bottom: 20px;
   text-decoration: none;
 }
-
 
 .divider {
   display: flex;
@@ -87,15 +90,12 @@ input:disabled {
   margin-bottom: 10px;
 }
 
-
 .login a {
   color: red;
   font-weight: bold;
   text-decoration: none;
   cursor: pointer;
 }
-
-
 
 button {
   margin-top: 15px;
@@ -106,4 +106,24 @@ button {
   border-radius: 20px;
   font-size: 16px;
   cursor: pointer;
+}
+
+.animated-ball {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(255, 0, 0, 0.6) 10%, rgba(255, 0, 0, 0) 70%);
+  border-radius: 50%;
+  animation: moveBall 50s infinite alternate ease-in-out;
+  pointer-events: none;
+}
+
+@keyframes moveBall {
+  0% { top: 10%; left: 10%; }
+  25% { top: 80%; left: 20%; }
+  50% { top: 50%; left: 90%; }
+  75% { top: 20%; left: 70%; }
+  100% { top: 90%; left: 40%; }
 }

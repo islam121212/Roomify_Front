@@ -1,3 +1,4 @@
+import { RedirectComponent } from './redirect/redirect.component';
 import { ForgetComponent } from './forget/forget.component';
 import { OtpCodeComponent } from './otp-code/otp-code.component';
 import { ConfirmEmailComponent } from './confirm-email/confirm-email.component';
@@ -27,5 +28,6 @@ export const routes: Routes = [
   { path: 'confirm', component: ConfirmEmailComponent },
   { path: 'otp', component: OtpCodeComponent },
   { path: 'forget', component: ForgetComponent },
+  { path: 'redirect', component: RedirectComponent },
   { path: '', redirectTo: '/register', pathMatch: 'full' },
 ];
