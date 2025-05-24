@@ -37,13 +37,15 @@
             </button>
 
             <!-- القائمة المنسدلة -->
-            <ul class="dropdown-menu">
-               <a [routerLink]="['/register']"><li><i class="bi bi-person-plus-fill"></i> Sign up</li></a>
-                <a routerLink="/profile"><li><i class="bi bi-person"></i> Profile</li></a>
-                <a [routerLink]="['/settings']"><li><i class="bi bi-gear"></i> Settings</li></a>
-                <a  [routerLink]="['/register']"> <li><i class="bi bi-bell"></i> Notifications</li></a>
-                <a  [routerLink]="['/login']"><li class="logout">Log out</li></a>
-            </ul>
+         <ul class="dropdown-menu">
+  <a [routerLink]="['/register']"><li><i class="bi bi-person-plus-fill"></i> Sign up</li></a>
+  <a routerLink="/profile"><li><i class="bi bi-person"></i> Profile</li></a>
+  <a [routerLink]="['/settings']"><li><i class="bi bi-gear"></i> Settings</li></a>
+  <a [routerLink]="['/register']"><li><i class="bi bi-bell"></i> Notifications</li></a>
+  <a [routerLink]="['/messages']"><li><i class="bi bi-chat-dots"></i> Messages</li></a>
+  <a [routerLink]="['/login']"><li class="logout">Log out</li></a>
+</ul>
+
         </div>
     </div>
 </nav>

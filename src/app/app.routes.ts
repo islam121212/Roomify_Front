@@ -13,6 +13,8 @@ import { SettingsComponent } from './settings/settings.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { FollowingComponent } from './following/following.component';
 import { FollowersComponent } from './followers/followers.component';
+import { MessagesComponent } from './messages/messages.component';
+
 
 export const routes: Routes = [
   { path: 'register', component: RegisterComponent },
@@ -28,6 +30,7 @@ export const routes: Routes = [
   { path: 'confirm', component: ConfirmEmailComponent },
   { path: 'otp', component: OtpCodeComponent },
   { path: 'forget', component: ForgetComponent },
+  { path: 'messages', component: MessagesComponent },
   { path: 'redirect', component: RedirectComponent },
   { path: '', redirectTo: '/register', pathMatch: 'full' },
 ];
