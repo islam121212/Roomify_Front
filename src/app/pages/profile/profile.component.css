@@ -1,24 +1,9 @@
-html, body {
-  background-color: #1a001a;
-  margin: 0;
-  padding: 0;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  color: white;
-  font-family: 'Segoe UI', sans-serif;
-  min-height: 100vh;
-  background-attachment: fixed;
-}
 
 .container {
   display: flex;
   min-height: 100vh;
   min-width: 100vw;
+   background-color: #1a001a;
 }
 
 /* Sidebar */
