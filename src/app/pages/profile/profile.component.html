@@ -4,6 +4,10 @@
 
   <!-- Sidebar -->
   <aside class="sidebar">
+<a class="settings-icon" routerLink="/settings">
+  <i class="bi bi-gear"></i>
+</a>
+
     <img class="avatar" src="./assets/jojo.jpg" alt="Profile">
     <h2>{{ userName }}</h2>
     <p class="username">{{ role }}</p>
@@ -11,12 +15,12 @@
     <div class="followers">
       <p>
         <strong>
-          <a routerLink="/followers" style="text-decoration: none; color: inherit;">1.3k followers</a>
+          <a routerLink="/followers" style="text-decoration: none; color: white;">1.3k followers</a>
         </strong>
       </p>
       <p>
         <strong>
-          <a routerLink="/following" style="text-decoration: none; color: inherit;">45 following</a>
+          <a routerLink="/following" style="text-decoration: none; color: white;">45 following</a>
         </strong>
       </p>
     </div>
@@ -26,11 +30,6 @@
       <i class="bi bi-arrow-clockwise"></i>
       <i class="bi bi-bookmark"></i>
     </div>
-
-    <div class="settings">
-      <a routerLink="/settings"><i class="bi bi-gear"></i></a>
-    </div>
-
   </aside>
 
   <!-- Main Content -->

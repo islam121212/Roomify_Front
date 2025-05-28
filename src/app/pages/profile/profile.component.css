@@ -1,9 +1,8 @@
-
 .container {
   display: flex;
   min-height: 100vh;
   min-width: 100vw;
-   background-color: #1a001a;
+  background-color: #1a001a;
 }
 
 /* Sidebar */
@@ -14,6 +13,21 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative; /* مهم علشان position:absolute */
+}
+
+.settings-icon {
+  position: absolute;
+  top: 120px;
+  left: 20px;
+  font-size: 22px;
+  color: white;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.settings-icon:hover {
+  color: #ffcc00;
 }
 
 .avatar {
@@ -27,6 +41,7 @@
 h2 {
   font-size: 30px;
   margin-bottom: 15px;
+  color: white;
 }
 
 .title {
@@ -36,7 +51,7 @@ h2 {
 
 .username {
   font-size: 18px;
-  color: #888;
+  color: white;
   margin-bottom: 20px;
 }
 
@@ -91,13 +106,13 @@ h2 {
   border: 2px solid white;
 }
 
+/* ✅ تم التعديل هنا */
 .gallery {
   display: flex;
+  flex-wrap: wrap;
   gap: 25px;
-  overflow-x: auto;
-  overflow-y: hidden;
   padding: 120px 30px 30px 30px;
-  scroll-behavior: smooth;
+  justify-content: flex-start;
 }
 
 .image-card {
@@ -130,15 +145,7 @@ h2 {
   100% { top: 90%; left: 40%; }
 }
 
+/* ❌ تم حذف السكروول */
 .gallery::-webkit-scrollbar {
-  height: 8px;
-}
-
-.gallery::-webkit-scrollbar-thumb {
-  background-color: #888;
-  border-radius: 10px;
-}
-
-.gallery::-webkit-scrollbar-track {
-  background-color: #1a001a;
+  display: none;
 }

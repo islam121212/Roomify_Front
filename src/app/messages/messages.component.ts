@@ -1,32 +1,27 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { AllUsersService } from '../services/all-users.service';
 
 @Component({
   selector: 'app-messages',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule], // ✅ أضف CommonModule هنا
   templateUrl: './messages.component.html',
   styleUrls: ['./messages.component.css']
 })
-export class MessagesComponent {
-  messages = [
-    {
-      sender: 'Ali Ellebi',
-      content: 'Hi bro, how are you?',
-      time: '08:20 AM',
-      isMine: false
-    },
-    {
-      sender: 'Me',
-      content: 'Hi bro, how are you?',
-      time: '08:20 AM',
-      isMine: true
-    },
-    {
-      sender: 'Me',
-      content: 'Hi bro, how are you?',
-      time: '08:20 AM',
-      isMine: true
-    }
-  ];
+export class MessagesComponent implements OnInit {
+  users: any[] = [];
+
+  constructor(private allUsersService: AllUsersService) {}
+
+  ngOnInit() {
+    this.allUsersService.getUsers().subscribe({
+      next: (users) => {
+        this.users = users;
+      },
+      error: (err) => {
+        console.error('Error fetching users:', err);
+      }
+    });
+  }
 }
