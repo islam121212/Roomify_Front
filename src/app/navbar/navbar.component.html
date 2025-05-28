@@ -1,26 +1,35 @@
-<nav class="navbar navbar-expand-lg fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">Roomify</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#">الرئيسية</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">حول</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">اتصل بنا</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/login">تسجيل الدخول</a>
-          </li>
-        </ul>
-      </div>
+<!-- navbar.component.html -->
+<div class="animated-ball"></div>
+
+<nav class="navbar">
+  <div class="logo">
+    <a routerLink="/">ROOMIFY</a>
+  </div>
+
+  <div class="nav-icons">
+    <div class="search-container">
+      <label for="searchBox" class="search-icon">
+        <i class="bi bi-search"></i>
+      </label>
+      <input type="text" id="searchBox" class="search-box" placeholder="Search ... ">
     </div>
-  </nav>
-  
+
+    <i class="bi bi-layers"></i>
+    <a routerLink="/generate"><i class="bi bi-brush"></i></a>
+
+    <div class="profile-dropdown">
+      <button class="profile-btn">
+        <img src="/assets/jojo.jpg" alt="Profile" class="profile-img">
+      </button>
+
+      <ul class="dropdown-menu">
+        <a routerLink="/register"><li><i class="bi bi-person-plus-fill"></i> Sign up</li></a>
+        <a routerLink="/profile"><li><i class="bi bi-person"></i> Profile</li></a>
+        <a routerLink="/settings"><li><i class="bi bi-gear"></i> Settings</li></a>
+        <a routerLink="/notifications"><li><i class="bi bi-bell"></i> Notifications</li></a>
+        <a routerLink="/messages"><li><i class="bi bi-chat-dots"></i> Messages</li></a>
+        <a routerLink="/login"><li class="logout">Log out</li></a>
+      </ul>
+    </div>
+  </div>
+</nav>
