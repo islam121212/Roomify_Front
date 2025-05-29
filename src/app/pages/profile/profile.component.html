@@ -1,13 +1,16 @@
 <app-navbar></app-navbar>
-<div class="animated-ball"></div>
+
+<!-- كرتين للخلفية -->
+<div class="animated-ball big-ball"></div>
+<div class="animated-ball small-ball"></div>
 
 <div class="container">
 
   <!-- Sidebar -->
   <aside class="sidebar">
-<a class="settings-icon" routerLink="/settings">
-  <i class="bi bi-gear"></i>
-</a>
+    <a class="settings-icon" routerLink="/settings">
+      <i class="bi bi-gear"></i>
+    </a>
 
     <img class="avatar" src="./assets/jojo.jpg" alt="Profile">
     <h2>{{ userName }}</h2>
@@ -35,11 +38,7 @@
 
   <!-- Main Content -->
   <main class="main-content">
-    <div class="top-bar">
-      <i class="bi bi-layers"></i>
-      <i class="bi bi-brush"></i>
-      <img src="./assets/jojo.jpg" class="top-avatar" alt="Top Avatar">
-    </div>
+  
 
     <div class="gallery">
       <div class="image-card"><img src="./assets/room1.jpg" alt="Room"></div>

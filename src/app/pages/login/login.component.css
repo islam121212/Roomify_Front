@@ -6,16 +6,7 @@
   font-family: 'Arial', sans-serif;
 }
 
-/* Background */
-body {
-  background-color: #120013;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  overflow: hidden;
-}
+
 
 /* Container */
 .container {
@@ -150,24 +141,35 @@ input::placeholder {
   background-color: #666;
 }
 
-/* Animated ball background */
-.animated-ball {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 200px;
-  height: 200px;
-  background: radial-gradient(circle, rgba(255, 0, 0, 0.6) 10%, rgba(255, 0, 0, 0) 70%);
-  border-radius: 50%;
-  animation: moveBall 50s infinite alternate ease-in-out;
-  pointer-events: none;
-  z-index: 0;
+
+.all {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  padding-top: 60px; /* لو فيه Navbar */
+}
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 30px;
+  background-color: #430d58;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+
 }
 
-@keyframes moveBall {
-  0% { top: 10%; left: 10%; }
-  25% { top: 80%; left: 20%; }
-  50% { top: 50%; left: 90%; }
-  75% { top: 20%; left: 70%; }
-  100% { top: 90%; left: 40%; }
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #f8f8f8;
+  letter-spacing: 1px;
 }

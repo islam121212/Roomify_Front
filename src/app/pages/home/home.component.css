@@ -49,37 +49,12 @@
   cursor: pointer;
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
-  background: #1a001f;
-  color: white;
-  font-family: Arial, sans-serif;
-  height: 100%;
-}
 
-body {
-  min-height: 100vh;
-}
 
-.animated-ball {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 200px;
-  height: 200px;
-  background: radial-gradient(circle, rgba(255, 0, 0, 0.6) 10%, rgba(255, 0, 0, 0) 70%);
-  border-radius: 50%;
-  animation: moveBall 50s infinite alternate ease-in-out;
-}
 
-@keyframes moveBall {
-  0% { top: 10%; left: 10%; }
-  25% { top: 80%; left: 20%; }
-  50% { top: 50%; left: 90%; }
-  75% { top: 20%; left: 70%; }
-  100% { top: 90%; left: 40%; }
-}
+
+
+
 
 /* حاوية البحث */
 .search-container {
@@ -184,6 +159,7 @@ body {
   gap: 70px;
   padding: 30px;
   justify-content: center;
+  background-color: #1a001f;
 }
 
 .image-card {
@@ -193,6 +169,8 @@ body {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    max-height: calc(100vh - 100px); /* حسب ارتفاع الشريط العلوي */
+  overflow-y: auto;
 }
 
 .image-card img {
