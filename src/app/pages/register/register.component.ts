@@ -12,7 +12,7 @@ import { BackgroundComponent } from '../../background/background.component';
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css'],
-  imports: [CommonModule, ReactiveFormsModule, RouterModule , BackgroundComponent],
+  imports: [CommonModule, ReactiveFormsModule, RouterModule],
   standalone: true,
 })
 export class RegisterComponent {

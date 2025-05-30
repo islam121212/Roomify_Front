@@ -173,3 +173,18 @@ input::placeholder {
   color: #f8f8f8;
   letter-spacing: 1px;
 }
+
+h2{
+  color: white;
+}
+span{
+  color: white;
+}
+
+label{
+  color: white;
+}
+
+p{
+  color: white;
+}

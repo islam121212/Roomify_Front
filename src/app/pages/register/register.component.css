@@ -28,11 +28,13 @@
   justify-content: center;
   align-items: center;
   margin-top: 80px; /* علشان navbar */
+   z-index: 1000;
 }
 
 .container {
   width: 600px;
   text-align: center;
+   z-index: 1000;
 
 }
 

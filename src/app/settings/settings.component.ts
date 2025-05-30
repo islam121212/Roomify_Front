@@ -17,7 +17,7 @@ export class SettingsComponent {
   }
 
   goHome() {
-    this.router.navigate(['/home']);
+    this.router.navigate(['/profile']);
   }
 
 }
