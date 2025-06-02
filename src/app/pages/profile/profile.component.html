@@ -12,9 +12,10 @@
       <i class="bi bi-gear"></i>
     </a>
 
-    <img class="avatar" src="./assets/jojo.jpg" alt="Profile">
+    <img class="avatar" src="./assets/avatar.png" alt="Profile">
     <h2>{{ userName }}</h2>
     <p class="username">{{ role }}</p>
+    
 
     <div class="followers">
       <p>
@@ -38,15 +39,10 @@
 
   <!-- Main Content -->
   <main class="main-content">
-  
-
     <div class="gallery">
-      <div class="image-card"><img src="./assets/room1.jpg" alt="Room"></div>
-      <div class="image-card"><img src="./assets/room1.jpg" alt="Room"></div>
-      <div class="image-card"><img src="./assets/room1.jpg" alt="Room"></div>
-      <div class="image-card"><img src="./assets/room1.jpg" alt="Room"></div>
-      <div class="image-card"><img src="./assets/room1.jpg" alt="Room"></div>
-      <div class="image-card"><img src="./assets/room1.jpg" alt="Room"></div>
+      <div class="image-card" *ngFor="let post of posts">
+        <img [src]="post.imagePath" alt="Room">
+      </div>
     </div>
   </main>
 </div>

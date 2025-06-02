@@ -1,3 +1,4 @@
+import { SplashComponent } from './splash/splash.component';
 import { RedirectComponent } from './redirect/redirect.component';
 import { ForgetComponent } from './forget/forget.component';
 import { OtpCodeComponent } from './otp-code/otp-code.component';
@@ -32,5 +33,5 @@ export const routes: Routes = [
   { path: 'forget', component: ForgetComponent },
   { path: 'messages', component: MessagesComponent },
   { path: 'redirect', component: RedirectComponent },
-  { path: '', redirectTo: '/register', pathMatch: 'full' },
+    { path: '', component: SplashComponent },
 ];

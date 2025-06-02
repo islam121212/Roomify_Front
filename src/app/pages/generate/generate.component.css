@@ -18,15 +18,7 @@ body, html {
   box-sizing: border-box;
 }
 
-.animated-ball {
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(255, 0, 0, 0.6) 10%, rgba(255, 0, 0, 0) 70%);
-  border-radius: 50%;
-  animation: moveBall 50s infinite alternate ease-in-out;
-  z-index: 0;
-}
+
 
 @keyframes moveBall {
   0% { top: 10%; left: 10%; }
@@ -94,4 +86,42 @@ body, html {
   border-radius: 10px;
   width: 300px;
   color: white;
+}
+.room-type-menu-right {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 105%;
+  width: 300px;
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.room-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.room-option {
+  cursor: pointer;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 10px;
+  transition: 0.3s;
+  color: white;
+}
+
+.room-option:hover {
+  background-color: #444;
+}
+
+.room-option img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
 }
