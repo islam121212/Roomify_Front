@@ -241,3 +241,23 @@ h2 {
 .gallery::-webkit-scrollbar {
   display: none;
 }
+
+
+/* ... (جميع أكواد CSS السابقة كما هي) ... */
+
+/* أضف هذا الجزء الجديد في أي مكان مناسب في ملف CSS */
+.post-description {
+  color: #ccc; /* لون نص رمادي فاتح */
+  font-size: 0.9em; /* حجم خط أصغر قليلاً */
+  padding: 10px 5px; /* بادينج خفيف حول النص */
+  text-align: center; /* محاذاة النص للمنتصف */
+  overflow: hidden; /* لإخفاء النص الزائد إذا كان طويلاً جداً */
+  text-overflow: ellipsis; /* لإضافة ... للنص الطويل */
+  white-space: nowrap; /* لمنع النص من النزول لسطر جديد */
+  /* لو عايز النص ينزل لسطور جديدة ويظهر كله، شيل السطرين اللي فاتوا (overflow و text-overflow و white-space)
+     وخلي الـ padding top بس عشان متلزقش في الصورة */
+  /* padding-top: 5px; */
+  /* max-height: 40px; */ /* ممكن تحدد أقصى ارتفاع لوصف من سطرين مثلاً */
+}
+
+/* ... (بقية أكواد CSS كما هي) ... */

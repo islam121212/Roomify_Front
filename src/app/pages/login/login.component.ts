@@ -24,13 +24,22 @@ export class LoginComponent {
   onSubmit() {
     this.authService.login(this.email, this.password).subscribe({
       next: (res: any) => {
+        // **** التعديل هنا: حفظ كل قيمة بمفتاحها الخاص ****
         localStorage.setItem('token', res.token);
-        localStorage.setItem('user', JSON.stringify(res));  // تخزين كامل بيانات المستخدم
-        this.router.navigate(['/profile']);  // تأكد أنك توجه للبروفايل
+        localStorage.setItem('userId', res.userId);     // حفظ الـ userId
+        localStorage.setItem('userName', res.userName); // حفظ اسم المستخدم
+
+        // لو عاوز تحفظ الـ roles برضه
+        if (res.roles) {
+          localStorage.setItem('userRoles', JSON.stringify(res.roles)); // لو الـ roles مصفوفة
+        }
+
+        this.router.navigate(['/profile']); // توجيه لصفحة البروفايل
       },
       error: (err: any) => {
         console.error(err);
-        this.errorMessage = 'Email or password is incorrect.';
+        // رسالة خطأ أوضح للمستخدم
+        this.errorMessage = 'فشل تسجيل الدخول. تأكد من البريد الإلكتروني وكلمة المرور.';
       }
     });
   }

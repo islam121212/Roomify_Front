@@ -41,6 +41,10 @@
       <div class="image-card" *ngFor="let post of posts">
         <img [src]="post.imagePath" alt="Room">
 
+        <div class="post-description">
+          {{ post.description }}
+        </div>
+
         <div class="image-options">
           <i class="bi bi-three-dots-vertical" (click)="toggleOptions(post.id)"></i>
 

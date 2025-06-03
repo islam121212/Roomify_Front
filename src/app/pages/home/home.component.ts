@@ -10,7 +10,7 @@ import { BackgroundComponent } from "../../background/background.component";
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
   standalone: true,
-  imports: [RouterModule, CommonModule, BackgroundComponent], // ✅ ضيفهم هنا
+  imports: [RouterModule, CommonModule, BackgroundComponent],
 })
 export class HomeComponent implements OnInit {
   posts: Post[] = [];
@@ -18,8 +18,14 @@ export class HomeComponent implements OnInit {
   constructor(private postsService: PostsService) {}
 
   ngOnInit(): void {
-    this.postsService.getAllPosts().subscribe((res) => {
+    // ✳️ استمع للتغييرات في البوستات من الخدمة
+    this.postsService.posts$.subscribe((res) => {
       this.posts = res;
+      console.log('HomeComponent received updated posts:', this.posts);
     });
+
+    // ✳️ تأكد إنك بتعمل جلب للبوستات أول مرة لما الكومبوننت يتحمل
+    // ده مهم عشان لو مفيش أي كومبوننت تاني عمل تحديث قبل ما الـ HomeComponent يشتغل
+    this.postsService.getAllPosts().subscribe(); // مجرد subscribe عشان ينفذ الـ tap ويحدث الـ BehaviorSubject
   }
 }
