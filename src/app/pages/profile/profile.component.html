@@ -30,9 +30,7 @@
 
     <div class="actions">
       <i class="bi bi-plus-circle" routerLink="/post"></i>
-      <i class="bi bi-heart"
-         [class.liked]="isHeartLiked"
-         (click)="toggleHeartLike()"></i>
+      <i class="bi bi-heart" [class.liked]="isHeartLiked" (click)="toggleHeartLike()"></i>
       <i class="bi bi-arrow-clockwise"></i>
       <i class="bi bi-bookmark"></i>
     </div>
@@ -42,6 +40,22 @@
     <div class="gallery">
       <div class="image-card" *ngFor="let post of posts">
         <img [src]="post.imagePath" alt="Room">
+
+        <div class="image-options">
+          <i class="bi bi-three-dots-vertical" (click)="toggleOptions(post.id)"></i>
+
+          <div *ngIf="showOptions && selectedPostId === post.id" class="options-menu-horizontal">
+            <button (click)="downloadImage()" title="تنزيل">
+              <i class="bi bi-download"></i>
+            </button>
+            <button (click)="saveImage()" title="حفظ">
+              <i class="bi bi-bookmark-fill"></i>
+            </button>
+            <button (click)="deleteImage()" title="حذف">
+              <i class="bi bi-trash"></i>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </main>
