@@ -1,12 +1,10 @@
 <app-navbar></app-navbar>
 
-<!-- كرتين للخلفية -->
 <div class="animated-ball big-ball"></div>
 <div class="animated-ball small-ball"></div>
 
 <div class="container">
 
-  <!-- Sidebar -->
   <aside class="sidebar">
     <a class="settings-icon" routerLink="/settings">
       <i class="bi bi-gear"></i>
@@ -15,7 +13,7 @@
     <img class="avatar" src="./assets/avatar.png" alt="Profile">
     <h2>{{ userName }}</h2>
     <p class="username">{{ role }}</p>
-    
+
 
     <div class="followers">
       <p>
@@ -31,13 +29,15 @@
     </div>
 
     <div class="actions">
-      <i class="bi bi-heart"></i>
+      <i class="bi bi-plus-circle" routerLink="/post"></i>
+      <i class="bi bi-heart"
+         [class.liked]="isHeartLiked"
+         (click)="toggleHeartLike()"></i>
       <i class="bi bi-arrow-clockwise"></i>
       <i class="bi bi-bookmark"></i>
     </div>
   </aside>
 
-  <!-- Main Content -->
   <main class="main-content">
     <div class="gallery">
       <div class="image-card" *ngFor="let post of posts">

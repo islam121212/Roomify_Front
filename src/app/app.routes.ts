@@ -15,6 +15,7 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
 import { FollowingComponent } from './following/following.component';
 import { FollowersComponent } from './followers/followers.component';
 import { MessagesComponent } from './messages/messages.component';
+import { PostComponent } from './post/post.component';
 
 
 export const routes: Routes = [
@@ -33,5 +34,6 @@ export const routes: Routes = [
   { path: 'forget', component: ForgetComponent },
   { path: 'messages', component: MessagesComponent },
   { path: 'redirect', component: RedirectComponent },
+  { path: 'post', component: PostComponent },
     { path: '', component: SplashComponent },
 ];

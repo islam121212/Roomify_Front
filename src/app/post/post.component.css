@@ -1,0 +1,91 @@
+.post-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #282828; /* لون خلفية داكن */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  color: #f0f0f0; /* لون نص فاتح */
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #ffcc00; /* لون مميز للعناوين */
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1.1em;
+  color: #e0e0e0;
+}
+
+.form-group input[type="file"],
+.form-group textarea {
+  width: calc(100% - 20px); /* عرض كامل مع بادينج */
+  padding: 10px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  background-color: #333;
+  color: #f0f0f0;
+  font-size: 1em;
+}
+
+.form-group textarea {
+  resize: vertical; /* السماح بتغيير حجم مربع النص عموديًا */
+  min-height: 100px;
+}
+
+.form-group input[type="file"] {
+  padding: 8px;
+}
+
+.upload-button {
+  display: block;
+  width: 100%;
+  padding: 12px 20px;
+  background-color: #007bff; /* لون أزرق للزر */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.upload-button:hover {
+  background-color: #0056b3;
+}
+
+.back-button {
+  display: block;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #6c757d; /* لون رمادي للزر */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+  text-align: center;
+  text-decoration: none; /* لإزالة خط تحت الروابط */
+}
+
+.back-button:hover {
+  background-color: #5a6268;
+}
+
+span {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.9em;
+  color: #aaa;
+}

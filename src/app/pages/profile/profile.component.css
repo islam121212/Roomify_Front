@@ -63,17 +63,22 @@ h2 {
   white-space: nowrap;
 }
 
-.actions {
-  display: flex;
-  flex-direction: row;
-  gap: 25px;
-  font-size: 30px;
-  margin-left: 0;
-  margin-top: 30px;
-  color: white;
-  justify-content: center;
+/* الأنماط الحالية ستكون مناسبة */
+.actions i {
+  margin-right: 15px; /* ضبط المسافة بين الأيقونات */
+  cursor: pointer; /* للإشارة إلى أنه قابل للنقر */
+  font-size: 1.5rem; /* مثال لحجم الخط */
+  color: #fff; /* مثال للون الأيقونة */
+  transition: color 0.2s ease-in-out; /* انتقال سلس للون عند التحويم */
 }
 
+.actions i:hover {
+  color: #ccc; /* مثال للون عند التحويم */
+}
+
+.actions i.liked {
+  color: red; /* اللون الأحمر عند الإعجاب */
+}
 .settings {
   margin-top: 120px;
   font-size: 20px;
