@@ -1,0 +1,296 @@
+/* الألوان الأساسية والمتغيرات (من الأفضل استخدامها لتوحيد الثيم) */
+:root {
+  --dark-bg: #1a0b1f; /* لون خلفية الجسم */
+  --card-bg: #2a1d31; /* لون خلفية بطاقات التعليق/العناصر */
+  --input-bg: #3a2b4c; /* لون خلفية حقل الإدخال */
+  --input-focus-bg: #4a3d5f; /* لون خلفية حقل الإدخال عند التركيز */
+  --send-btn-bg: #8d44ad; /* لون زر الإرسال */
+  --send-btn-hover-bg: #a05acd; /* لون زر الإرسال عند التمرير */
+  --text-primary: white; /* لون النص الأساسي */
+  --border-color: #4a3d5f; /* لون الحدود الخفيف */
+  --back-button-bg: #3a2b4c; /* لون زر الرجوع */
+  --back-button-hover-bg: #52006a; /* لون زر الرجوع عند التمرير */
+  --edit-btn-bg: #4CAF50; /* لون زر التعديل (أخضر) */
+  --delete-btn-bg: #f44336; /* لون زر الحذف (أحمر) */
+  --btn-hover-darken: rgba(0, 0, 0, 0.1); /* تأثير التظليل عند التمرير */
+}
+
+body {
+  background-color: var(--dark-bg);
+  color: var(--text-primary);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.container {
+  max-width: 900px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.col-md-8.offset-md-2 {
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+}
+
+
+.main-img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.post-description {
+  font-size: 1.1em;
+  color: var(--text-secondary, #e0e0e0);
+  margin-top: 15px;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+/* Comments Section */
+#comments-section {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 10px;
+  margin-bottom: 20px;
+}
+
+/* شريط التمرير المخصص (لـ Webkit browsers) */
+#comments-section::-webkit-scrollbar {
+  width: 8px;
+}
+#comments-section::-webkit-scrollbar-track {
+  background: var(--input-bg);
+  border-radius: 10px;
+}
+#comments-section::-webkit-scrollbar-thumb {
+  background: var(--send-btn-bg);
+  border-radius: 10px;
+}
+#comments-section::-webkit-scrollbar-thumb:hover {
+  background: var(--send-btn-hover-bg);
+}
+
+
+.comment-item {
+  background-color: var(--card-bg);
+  border-radius: 15px;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+  position: relative; /* لتموضع أزرار التعديل والحذف */
+}
+
+.comment-item:hover {
+  transform: translateY(-2px);
+}
+
+.user-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 15px;
+  object-fit: cover;
+  border: 2px solid var(--send-btn-bg);
+}
+
+.comment-content-wrapper {
+  flex-grow: 1;
+}
+
+.comment-item strong {
+  font-size: 1.1em;
+  color: white;
+}
+
+.comment-item p {
+  font-size: 0.95em;
+  color: white;
+}
+
+/* ✳️ ستايل حقل الإدخال عند التعديل */
+.comment-edit-input {
+  background-color: var(--input-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  border-radius: 8px;
+  padding: 8px 12px;
+  width: 100%;
+  min-height: 60px; /* ارتفاع افتراضي معقول */
+  resize: vertical; /* للسماح بتغيير حجمه عمودياً */
+}
+
+.comment-edit-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(141, 68, 173, 0.4);
+}
+
+.no-comments-message {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 1.1em;
+  padding: 30px;
+  background-color: var(--card-bg);
+  border-radius: 15px;
+  margin-top: 20px;
+}
+
+
+/* Comment Input Section */
+.comment-box {
+  background-color: var(--card-bg);
+  border-radius: 15px;
+  padding: 10px 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.comment-input {
+  background-color: var(--input-bg);
+  border: none;
+  color: var(--text-primary);
+  border-radius: 10px;
+  padding: 10px 15px;
+}
+
+.comment-input::placeholder {
+  color: var(--text-secondary);
+}
+
+.comment-input:focus {
+  background-color: var(--input-focus-bg);
+  color: var(--text-primary);
+  box-shadow: 0 0 0 3px rgba(141, 68, 173, 0.4);
+  outline: none;
+}
+
+.send-btn {
+  background-color: var(--send-btn-bg);
+  color: var(--text-primary);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 18px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.send-btn:hover {
+  background-color: var(--send-btn-hover-bg);
+  transform: translateY(-1px);
+}
+
+.send-btn:active {
+  transform: translateY(0);
+}
+
+/* Back Button */
+.back-button {
+  background-color: var(--back-button-bg);
+  color: var(--text-primary);
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-size: 1em;
+  cursor: pointer;
+  margin-bottom: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.back-button i {
+  font-size: 1.2em;
+}
+
+.back-button:hover {
+  background-color: var(--back-button-hover-bg);
+  transform: translateX(-3px);
+}
+
+/* ✳️ ستايلات أزرار التعديل والحذف */
+.comment-actions {
+  display: flex;
+  align-items: center;
+  margin-left: 15px; /* مسافة من التعليق */
+}
+
+.comment-actions .btn {
+  font-size: 0.9em;
+  padding: 6px 10px;
+  border-radius: 6px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-edit {
+  background-color: var(--edit-btn-bg);
+}
+
+.btn-edit:hover {
+  background-color: color-mix(in srgb, var(--edit-btn-bg) 85%, var(--btn-hover-darken));
+}
+
+.btn-delete {
+  background-color: var(--delete-btn-bg);
+}
+
+.btn-delete:hover {
+  background-color: color-mix(in srgb, var(--delete-btn-bg) 85%, var(--btn-hover-darken));
+}
+
+/* أزرار الحفظ والإلغاء داخل وضع التعديل */
+.btn-success {
+    background-color: #28a745; /* لون أخضر قياسي من Bootstrap */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 0.85em;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.btn-success:hover {
+    background-color: #218838;
+}
+
+.btn-secondary {
+    background-color: #6c757d; /* لون رمادي قياسي من Bootstrap */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 0.85em;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .col-md-8.offset-md-2 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .comment-item {
+    flex-wrap: wrap; /* للسماح للأزرار بالنزول لسطر جديد على الشاشات الصغيرة */
+  }
+  .comment-actions {
+    width: 100%;
+    justify-content: flex-end; /* تحريك الأزرار لليمين في سطرها الجديد */
+    margin-top: 10px;
+    margin-left: 0;
+  }
+  .comment-edit-input {
+    width: 100%;
+  }
+}

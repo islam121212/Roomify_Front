@@ -24,7 +24,7 @@ export const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'generate', component: GenerateComponent },
   { path: 'profile', component: ProfileComponent },
-  { path: 'comment', component: CommentComponent },
+  { path: 'comment/:postId', component: CommentComponent },
   { path: 'settings', component: SettingsComponent },
   { path: 'changepass', component: ChangePasswordComponent },
   { path: 'following', component: FollowingComponent },

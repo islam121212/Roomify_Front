@@ -6,18 +6,18 @@
 
   <div class="profile-section">
     <div class="avatar-wrapper">
-      <img src="/assets/pro.jpeg" alt="Profile" class="avatar" />
+      <img [src]="userProfile.profilePictureUrl || '/assets/default-pro.jpeg'" alt="Profile" class="avatar" />
       <label class="edit-icon">
-        <input type="file" hidden />
+        <input type="file" hidden (change)="onProfilePictureSelected($event)" />
         ✎
       </label>
     </div>
   </div>
 
   <div class="form-section">
-    <input type="text" placeholder="Full Name" />
-    <input type="text" placeholder="User Name" />
-    <input type="email" placeholder="email@gmail.com" disabled />
+    <input type="text" placeholder="Full Name" [(ngModel)]="userProfile.fullName" />
+    <input type="text" placeholder="User Name" [(ngModel)]="userProfile.userName" />
+    <input type="email" placeholder="email@gmail.com" [(ngModel)]="userProfile.email" disabled />
 
     <button class="change-password-btn" (click)="goToSettings()">Change Password</button>
 
