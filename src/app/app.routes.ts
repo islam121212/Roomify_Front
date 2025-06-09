@@ -16,6 +16,7 @@ import { FollowingComponent } from './following/following.component';
 import { FollowersComponent } from './followers/followers.component';
 import { MessagesComponent } from './messages/messages.component';
 import { PostComponent } from './post/post.component';
+import { NotificationsComponent } from './notifications/notifications.component';
 
 
 export const routes: Routes = [
@@ -35,5 +36,6 @@ export const routes: Routes = [
   { path: 'messages', component: MessagesComponent },
   { path: 'redirect', component: RedirectComponent },
   { path: 'post', component: PostComponent },
+  { path: 'notifications', component: NotificationsComponent },
     { path: '', component: SplashComponent },
 ];
